@@ -1,0 +1,12 @@
+<?php 
+if(!isset($_SESSION['status'])){
+    if(!isset($_SESSION['namapegawai'])){
+        session_abort();
+        if(!isset($_SESSION['kd_pegawai'])){
+            session_abort();
+        }
+    }
+    header("location:../index.php");
+    exit(5);    
+}
+?>
